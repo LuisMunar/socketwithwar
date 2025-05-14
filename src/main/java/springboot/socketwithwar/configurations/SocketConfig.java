@@ -11,8 +11,8 @@ import org.springframework.messaging.simp.config.MessageBrokerRegistry;
 public class SocketConfig implements WebSocketMessageBrokerConfigurer {
   @Override
   public void registerStompEndpoints(StompEndpointRegistry registry) {
-    registry.addEndpoint("/socket")
-      .setAllowedOrigins("http://localhost:4200")
+    registry.addEndpoint("/ws")
+      .setAllowedOrigins("http://localhost:4200", "http://localhost:4210")
       .withSockJS();
   }
 
